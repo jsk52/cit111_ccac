@@ -1,0 +1,32 @@
+package objects;
+
+/**
+ *
+ * @author julie.kurtzman
+ */
+public class Donut {
+    //member variables
+    private int percRemaining = 100;
+    public String name;
+    private int yumminessFactor;
+    public String size;
+    
+    public void simulateEating(int percentEaten){
+        System.out.println("I'm " + name + " and " + percentEaten + " % of me is getting eaten!");
+        percRemaining = percRemaining - percentEaten;
+    }//close method
+    
+    public int getPercRemaining(){
+        return percRemaining;
+    }//close method
+    
+    public void setyumminessFactor (int factor){
+        if (factor >= 1 && factor <= 5){
+            yumminessFactor = factor;    
+        }
+        else yumminessFactor = 1;
+    }
+    public int getyumminessFactor (){
+        return yumminessFactor;
+    }
+}
