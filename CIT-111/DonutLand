@@ -1,0 +1,50 @@
+package objects;
+
+import java.util.HashSet;
+
+/**
+ *
+ * @author julie.kurtzman
+ */
+public class DonutLand {
+    public static void main (String[] args){
+        //create a var of type Donut called firstDonut
+        Donut firstDonut; 
+        //instantiate a Donut object and store its location in firstDonut
+        firstDonut = new Donut();
+        firstDonut.name = "Julie";
+        firstDonut.setyumminessFactor(2);
+        firstDonut.size = "smaller";
+      
+        System.out.println(firstDonut.name);
+        System.out.println(firstDonut.getyumminessFactor());
+        System.out.println(firstDonut.getPercRemaining());
+        System.out.println(firstDonut.size);
+        
+        firstDonut.simulateEating(12);
+        System.out.println(firstDonut.getPercRemaining());
+        
+        firstDonut.simulateEating(88);
+        System.out.println(firstDonut.getPercRemaining());
+        
+        Donut secondDonut = new Donut();
+        secondDonut.name = "Julia";
+        secondDonut.setyumminessFactor(6);
+        secondDonut.size = "so so so small :( ";
+        
+        System.out.println(secondDonut.name);
+        System.out.println(secondDonut.getyumminessFactor());
+        System.out.println(secondDonut.getPercRemaining());
+        System.out.println(secondDonut.size);
+        
+        secondDonut.simulateEating(49);
+        System.out.println(secondDonut.getPercRemaining());
+        
+        secondDonut.simulateEating(11);
+        System.out.println(firstDonut.getPercRemaining());
+        
+        secondDonut.simulateEating(40);
+        System.out.println(firstDonut.getPercRemaining());
+        
+    }//close main
+    }
